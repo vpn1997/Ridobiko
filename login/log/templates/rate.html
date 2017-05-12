@@ -1,0 +1,510 @@
+<html>
+
+<head>
+{%load static%}
+    <link href="{% static 'css/bootstrap.css' % }" rel='stylesheet' type='text/css' />
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<!-- Custom Theme files -->
+<link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css" media="all" />
+    <link href="{% static 'css/srch.css' %}" rel="stylesheet" type="text/css" media="all" />
+    <link href="{% static 'css/review.css' %}" rel="stylesheet" type="text/css" media="all" />
+    
+    <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<!-- Custom Theme files -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Pakhi Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!--webfont-->
+<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+<!-- dropdown -->
+<script src="{% static 'js/jquery.easydropdown.js' %}"></script>
+<link href="{% static 'css/nav.css' %}" rel="stylesheet" type="text/css" media="all"/>
+		 <script src="{% static 'js/scripts.js' %}" type="text/javascript"></script>
+    
+    
+    <style>
+    
+        #tabl td{padding: 8px;}
+        #tabl th{padding-top: 0px;}
+         #tabl th{text-align: center;}
+        #tabl  td:nth-child(4) { text-align: center}
+        #tabl  td:nth-child(5) { text-align: center}
+        #tabl  td:nth-child(3) { text-align: center}
+    
+    
+    
+    
+    
+    </style>
+    
+    
+    </head>
+
+
+<body>
+    <div class="top-header navbar-default navbar-fixed-top fixed" style='background-color:#eb1e29'>
+            
+			<div class="container">
+			<div class="logo">
+				<a href="/index"><img src="{% static 'images/icon.png' %}" alt="" style='width:160px;height:60px;margin-top:-20px;'/></a>
+			</div>
+				<div class="header-top-right" style='margin-top:11px;margin-left:-40px;'>
+				 
+				 
+					 
+                    
+                    <div id='cas' style='float:left;display:block'>
+                     <a href="/buy" style='color:white;font-size:18px;display:block;'><i class="fa fa-shopping-cart" aria-hidden="true">&nbsp;Cart</i></a>
+                    </div>
+                    
+                    <div id='pas' style='float:left;margin-left:35px;font-size:18px;'>
+                     <a href="/login" style='color:white;'><i class="fa fa-sign-in" aria-hidden="true">&nbsp;Log In</i></a>
+                    </div>
+                    <br clear='all'>
+				</div>
+			<div class="navigation pull-right" style='padding-right:50px;color:white;margin-top:-10px;'>	
+			<div style='font-color:white'>
+              <label class="mobile_menu" for="mobile_menu">
+              <span>Menu</span>
+              </label>
+              <input id="mobile_menu" type="checkbox">
+				<ul class="nav" >
+               
+                     
+           <li class="dropdown1" ><a href="#" style='color:white;font-size:16px;margin-top:15px;'>Rent a bike</a>
+           	 
+           </li>        
+            <li><a href="blog.html" style='color:white;font-size:16px;margin-top:15px;'>Blog</a></li>
+            <div class="clearfix"></div>
+          </ul>
+		</div>			
+	 </div>
+			</div>
+		</div>
+    {% if p %}
+    {% for i in list %}
+    <div id='tabl' style='width:70%;height:auto;margin-top:120px;margin-left:15%;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);padding-bottom:10px;'>
+      
+    
+        <div id='collection' style='width:100%;height:auto;'>
+        <div id='ct1' style='width:33.33%;height:auto;padding-top:19px;float:left;text-align:center;'>
+            
+            <span style='font-size:15px;'><b>Pickup Location: {{i.0.0.0}} </b></span>
+            </div>
+            <div id='ct2' style='width:33.33%;height:auto;padding-top:19px;float:left;text-align:center; '>
+                
+             <span style='font-size:15px;'><b>Pickup date: {{i.0.0.1}}  </b></span>
+            </div>
+            <div id='ct3' style='width:33.33%;height:auto;padding-top:19px;float:left;text-align:center; '>
+                
+             <span style='font-size:15px;'><b>Drop date: {{i.0.0.2}}  </b></span>
+            </div>
+        
+        <br clear='all'>
+        </div>
+
+            <table style='width:100%;'>
+            <thead>
+                <col width="150">
+                
+                <tr>
+                <th> </th>
+                <th></th>
+                    <th>Bike rating</th>
+                <th>Rendor rating</th>
+                <th>Experience with Ridobiko</th>
+                </tr>
+                </thead>
+            <tbody>
+                <hr style='border: none;
+    height: 1px;
+    color: lightgrey;
+    background-color: lightgrey;'>
+    
+          {% for j in i.1 %}
+                <tr>
+                    <td>
+                 <img src="{% static 'images/' %}{{j.1}}" alt='photo' style='width:90px;height:70px;margin-left:20px;'>
+               </td>
+                <td>
+                </td>
+                   <td>
+                   <p><strong>{{j.0}}</strong></p></br>
+                   
+                       
+                        <div style='width:auto;height:auto;' class='bform'>
+    <form id="1{{forloop.parentloop.counter}}{{forloop.counter}}" class="ll">
+        <ul class='btnn ' data-v="{{forloop.parentloop.counter}}{{forloop.counter}}"  data-name="{{j.0}}" >
+          <li ><label for="brat1" class='full'> <i class="fa fa-star" aria-hidden="true"></i></label><input type='radio' name='brat' id='brat1' value='1'></li>
+            
+            
+        <li><label for='brat2' class='full'><i class="fa fa-star" aria-hidden="true"></i></label><input type='radio' name='brat' id='brat2' value='2'></li>
+        <li><label for='brat3' class='full'><i class="fa fa-star" aria-hidden="true"></i></label><input type='radio' name='brat' id='brat3' value='3'></li>
+        <li><label for='brat4' class='full'><i class="fa fa-star" aria-hidden="true"></i></label><input type='radio' name='brat' id='brat4' value='4'></li>
+        <li><label for='brat5' class='full'><i class="fa fa-star" aria-hidden="true"></i></label><input type='radio' name='brat' id='brat5' value='5'></li>
+          </ul>
+            
+           
+          </form>
+          <script>
+          
+          $('.bform li').on('click',function(){
+                           $('.bform li').removeClass('active');
+              $('.bform li').removeClass('secondary-active');
+                           $(this).addClass('active');
+              $(this).prevAll().addClass('secondary-active');
+                           
+                           })
+          
+                        </script></div>
+                       
+                       
+                    
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                    </td>
+                    <td>
+                        
+                        
+                        {% if j.2 %}
+                        <p><strong>{{j.2}}</strong></p>
+                        <p><strong>{{j.3}}</strong></p>
+                        
+                        <div style='width:auto;height:auto;' class='rform'>
+    <form id="2{{forloop.parentloop.counter}}{{forloop.counter}}">
+        <ul class='btns' data-v="{{forloop.parentloop.counter}}{{forloop.counter}}" data-ven={{j.2}} >
+          <li><label for="rrat1" class='full'> <i class="fa fa-star" aria-hidden="true"></i></label><input type='radio' name='rrat' id='rrat1' value='1'></li>
+            
+            
+        <li><label for='rrat2' class='full'><i class="fa fa-star" aria-hidden="true"></i></label><input type='radio' name='rrat' id='rrat2' value='2'></li>
+        <li><label for='rrat3' class='full'><i class="fa fa-star" aria-hidden="true"></i></label><input type='radio' name='rrat' id='rrat3' value='3'></li>
+        <li><label for='rrat4' class='full'><i class="fa fa-star" aria-hidden="true"></i></label><input type='radio' name='rrat' id='rrat4' value='4'></li>
+        <li><label for='rrat5' class='full'><i class="fa fa-star" aria-hidden="true"></i></label><input type='radio' name='rrat' id='rrat5' value='5'></li>
+          </ul>
+            
+          
+          </form>
+          <script>
+          
+          $('.rform li').on('click',function(){
+                           $('.rform li').removeClass('active');
+              $('.rform li').removeClass('secondary-active');
+                           $(this).addClass('active');
+              $(this).prevAll().addClass('secondary-active');
+                           
+                           })
+          
+                        </script></div>
+                        
+                        
+                        
+                        {% endif %}
+                        
+                    </td> 
+                    <td>
+                    {% if forloop.counter == 1 %}
+                    </br>
+                   <div style='width:auto;height:auto;' class='eform'>
+    <form id="3{{forloop.parentloop.counter}}{{forloop.counter}}">
+        <ul class='btnt' data-v="{{forloop.parentloop.counter}}{{forloop.counter}}">
+          <li><label for="riat1" class='full'> <i class="fa fa-star" aria-hidden="true"></i></label><input type='radio' name='erat' id='riat1' value='1'></li>
+            
+            
+        <li><label for='riat2' class='full'><i class="fa fa-star" aria-hidden="true"></i></label><input type='radio' name='erat' id='riat2' value='2'></li>
+        <li><label for='riat3' class='full'><i class="fa fa-star" aria-hidden="true"></i></label><input type='radio' name='erat' id='riat3' value='3'></li>
+        <li><label for='riat4' class='full'><i class="fa fa-star" aria-hidden="true"></i></label><input type='radio' name='erat' id='riat4' value='4'></li>
+        <li><label for='riat5' class='full'><i class="fa fa-star" aria-hidden="true"></i></label><input type='radio' name='erat' id='riat5' value='5'></li>
+          </ul>
+            
+          
+          </form>
+          <script>
+          
+          $('.eform li').on('click',function(){
+                           $('.eform li').removeClass('active');
+              $('.eform li').removeClass('secondary-active');
+                           $(this).addClass('active');
+              $(this).prevAll().addClass('secondary-active');
+                           
+                           })
+          
+                        </script></div>
+                        {% endif %}
+                    </td> 
+                    
+                
+   
+    <div id="myModal{{forloop.parentloop.counter}}{{forloop.counter}}" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    
+      <span class="close" id="ab{{forloop.parentloop.counter}}{{forloop.counter}}">&times;</span>
+      
+
+    <span>Write Review</span>
+
+    <form id="r1{{forloop.parentloop.counter}}{{forloop.counter}}" action="/rate" method="get" >
+      <textarea cols="5" rows="3" style='border:1px solid lightgrey;color:black;font-size:15px;' id='b{{forloop.parentloop.counter}}{{forloop.counter}}' placeholder="Write review" name='bike'>
+
+
+      </textarea>
+      <button type="button" class="btn btn-primary" name="submit" class="subs" id="1{{forloop.parentloop.counter}}{{forloop.counter}}s"
+       style='float:right;background-color:#454545;border-radius:3px;border:none;color:white;padding:3px 5px;margin-top:-10px;display: none;'>submit </button>
+    </form>
+    <form id="r2{{forloop.parentloop.counter}}{{forloop.counter}}" action="/rate" method="get">
+        <textarea cols="5" rows="3" style='border:1px solid lightgrey;color:black;font-size:15px;' id='v{{forloop.parentloop.counter}}{{forloop.counter}}' placeholder="Write review" name='rendor'>
+        </textarea>
+        <button type="button" name="in2" class="subs"  id="2{{forloop.parentloop.counter}}{{forloop.counter}}s" style='float:right;background-color:#454545;border-radius:3px;border:none;color:white;padding:3px 5px;margin-top:-10px;display: none;'>submit</button>
+    </form> 
+        
+    <form id="r3{{forloop.parentloop.counter}}{{forloop.counter}}" action="/rate" method="get">    
+        <textarea cols="5" rows="3"  style='border:1px solid lightgrey;color:black;font-size:15px;' id='r{{forloop.parentloop.counter}}{{forloop.counter}}' placeholder="Write review" name='rido'>
+        </textarea>
+        <button type="button" name="in3" class="subs"  id="3{{forloop.parentloop.counter}}{{forloop.counter}}s" style='float:right;background-color:#454545;border-radius:3px;border:none;color:white;padding:3px 5px;margin-top:-10px;display: none;'>submit</button>
+    </form>       
+        
+        {% endfor %}
+       
+     
+      <br clear='all'>
+      
+      
+      
+     
+  </div>
+
+</div>
+
+ </tr>
+                
+               
+                 
+
+                
+                </tbody>
+            
+            
+            </table>
+
+       
+    
+    
+    </div>
+     {% endfor %}
+
+  {% else %}
+               <p><strong>U DONT HAVE ANY ITEMS YET</strong></p>
+              
+              {%endif%}
+
+
+<script>
+// Get the modal
+
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+
+
+// When the user clicks the button, open the modal 
+$('.btnn').bind('click', function() {
+
+  var k=$(this).attr('data-v');
+  var nam=$(this).data('name');
+  
+ 
+  var fbik = document.getElementById('b'+k);
+  var frend = document.getElementById('v'+k);
+  var frid = document.getElementById('r'+k);
+         
+  var modal = document.getElementById('myModal'+k);
+  modal.style.display = "block";
+  fbik.style.display = "block";
+  frend.style.display = "none";
+  frid.style.display = "none";
+    
+    $('#1'+k+'s').css('display','block');
+    $('#2'+k+'s').css('display','none');
+    $('#3'+k+'s').css('display','none');
+    var span = document.getElementsByClassName("close")[k];
+
+    $('#1'+k+'s').on("click",function(){
+      var rev=$('textarea#b'+k).val();
+      var star=$('input[name=brat]:checked','#1'+k).val();
+      
+
+$.ajax({
+//The URL to process the request
+  'url' : '/rate',
+//The type of request, also known as the "method" in HTML forms
+//Can be 'GET' or 'POST'
+  'type' : 'GET',
+//Any post-data/get-data parameters
+//This is optional
+  'data' : {  
+    
+    'bike':nam,
+    'stars':star,
+    'review':rev,
+    
+
+
+                                                    
+  },
+//The response from the server
+  
+});
+modal.style.display = "none";
+
+
+    });
+
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+    });
+
+
+    $('.btns').bind('click', function() {
+       var k=$(this).attr('data-v');
+       var vend=$(this).data('ven');
+
+       var span = document.getElementsByClassName("close");
+       var fbik = document.getElementById('b'+k);
+       var frend = document.getElementById('v'+k);
+       var frid = document.getElementById('r'+k);
+       var modal = document.getElementById('myModal'+k);
+       modal.style.display = "block";
+       fbik.style.display = "none";
+       frend.style.display = "block";
+       frid.style.display = "none";
+       var k=$(this).attr('data-v');
+       $('#1'+k+'s').css('display','none');
+       $('#2'+k+'s').css('display','block');
+       $('#3'+k+'s').css('display','none');
+      
+      $('#2'+k+'s').on("click",function(){
+      var rev=$('textarea#v'+k).val();
+      var star=$('input[name=rrat]:checked','#2'+k).val();
+      
+
+$.ajax({
+//The URL to process the request
+  'url' : '/rate',
+//The type of request, also known as the "method" in HTML forms
+//Can be 'GET' or 'POST'
+  'type' : 'GET',
+//Any post-data/get-data parameters
+//This is optional
+  'data' : {  
+    
+    'vendor':vend,
+    'stars':star,
+    'review':rev,
+    
+
+
+                                                    
+  },
+//The response from the server
+  
+});
+modal.style.display = "none";
+
+
+    });
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+     
+    });
+
+
+    $('.btnt').bind('click', function() {
+      var k=$(this).attr('data-v');
+      var span = document.getElementsByClassName("close");
+      var fbik = document.getElementById('b'+k);
+      var frend = document.getElementById('v'+k);
+      var frid = document.getElementById('r'+k);
+      var modal = document.getElementById('myModal'+k);
+      modal.style.display = "block";
+      fbik.style.display = "none";
+      frend.style.display = "none";
+      frid.style.display = "block";
+      var k=$(this).attr('data-v');
+      $('#1'+k+'s').css('display','none');
+      $('#2'+k+'s').css('display','none');
+      $('#3'+k+'s').css('display','block');
+      
+     
+      $('#3'+k+'s').on("click",function(){
+      var rev=$('textarea#r'+k).val();
+      var star=$('input[name=erat]:checked','#3'+k).val();
+      
+
+$.ajax({
+//The URL to process the request
+  'url' : '/rate',
+//The type of request, also known as the "method" in HTML forms
+//Can be 'GET' or 'POST'
+  'type' : 'GET',
+//Any post-data/get-data parameters
+//This is optional
+  'data' : {  
+    
+    'rido':'rido',
+    'stars':star,
+    'review':rev,
+    
+
+
+                                                    
+  },
+//The response from the server
+  
+});
+modal.style.display = "none";
+
+
+    });
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+     
+    });
+
+// When the user clicks on <span> (x), close the modal
+
+</script>
+    
+    
+    
+    </body>
+
+
+
+</html>

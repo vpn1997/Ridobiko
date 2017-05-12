@@ -1,0 +1,22 @@
+
+
+.rform,.pform lable,input{display: block;}
+.rform,.pform ul{margin: 0;padding: 0}
+
+
+
+.rform ul li,.pform ul li{list-style-type: none;margin: 2px;
+    display: inline-block;
+    list-style-type: none;
+    margin: 5px;
+    color: white;
+    text-shadow: 2px 2px 7px grey;
+    font-size: 16px !important;
+    
+
+}
+.rform ul li:hover,.pform ul li:hover{color:orangered}
+ ul li.active,ul li.secondary-active{color: orangered}
+.rform input,.pform input[type='radio']{display: none;}
+ 
+ 

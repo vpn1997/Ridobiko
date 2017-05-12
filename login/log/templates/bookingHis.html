@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+{% load static %}
+        <title>Ridobiko</title> 
+    <link href="{% static 'css/bootstrap.css' %}" rel='stylesheet' type='text/css' />
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/personal.js' %}"></script>
+<!-- Custom Theme files -->
+<link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css" media="all" />
+    <link href="{% static 'css/srch.css' %}" rel="stylesheet" type="text/css" media="all" />
+    
+    <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<!-- Custom Theme files -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+<!-- dropdown -->
+<script src="{% static 'js/jquery.easydropdown.js' %}"></script>
+<link href="{% static 'css/nav.css' %}" rel="stylesheet" type="text/css" media="all"/>
+    <link href="{% static 'css/head.css' %}" rel="stylesheet" type="text/css" media="all"/>
+		 <script src="{% static 'js/scripts.js' %}" type="text/javascript"></script>
+    
+    
+    <style>
+        .tabl{width:70%;height:auto;margin-top:-580px;margin-left:15%;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);margin-bottom:35px;padding-bottom:10px;}
+        .tabl img{width:90px;height:70px;margin-left:20px;}
+        
+        	    .tabl  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+             
+}
+	/* Zebra striping */
+
+	.tabl  th { 
+		 
+		color: black; 
+		font-weight: bold; 
+	}
+.tabl td, th { 
+		padding: 5px 15px 15px 15px; 
+		
+		text-align: left; 
+	}
+
+.tabl tr:nth-child(even) {
+    background-color: #dddddd;
+}
+         
+    
+    a.lnk:hover{font-size: 17px !important;}
+         @media(max-width:1280px){
+             .tabl{margin-top: -528px}
+            
+        }
+        @media(max-width:1026px){
+             .tabl{margin-top: -408px}
+            
+        }
+        
+          @media 
+	only screen and (max-width: 825px),
+	(min-device-width: 825px) and (max-device-width: 1024px)  {
+	
+		/* Force table to not be like tables anymore */
+		.tabl  table, thead, tbody, th, td, tr { 
+			display: block; 
+		}
+ 
+		
+		/* Hide table headers (but not display: none;, for accessibility) */
+		.tabl thead tr { 
+			position: absolute;
+			top: -9999px;
+			left: -9999px;
+		}
+		
+		.tabl  tr { border: 1px solid #ccc; }
+		
+		.tabl  td { 
+			/* Behave  like a "row" */
+			border: none;
+			border-bottom: 1px solid #eee; 
+			position: relative;
+			padding-left: 50%; 
+		}
+		
+		.tabl td:before { 
+			/* Now like a table header */
+			position: absolute;
+			/* Top/left values mimic padding */
+			top: 6px;
+			left: 6px;
+			width: 45%; 
+			padding-right: 10px; 
+			white-space: nowrap;
+		}
+        
+		
+		/*
+		Label the data
+		*/
+
+    .tabl td:nth-of-type(1):before { content: "Image "; }
+    .tabl td:nth-of-type(2):before { content: "Name "; }
+	.tabl td:nth-of-type(3):before { content: "Rent"; }
+	.tabl td:nth-of-type(4):before { content: "Quantity"; }
+	.tabl td:nth-of-type(5):before { content: "Total"; }
+		
+         
+	}
+	
+	/* Smartphones (portrait and landscape) ----------- */
+	@media only screen
+	and (min-device-width : 320px)
+	and (max-device-width : 480px) {
+		body { 
+			padding: 0; 
+			margin: 0; 
+			width: 320px; }
+		}
+	
+	/* iPads (portrait and landscape) ----------- */
+	@media only screen and (min-device-width: 780px) and (max-device-width: 1024px) {
+		 
+	}
+        
+        @media(max-width:800px){
+            .men{margin-left: 40px;}
+            .tabl{margin-top: -258px}
+            
+        }
+    
+    
+    
+    </style>
+   
+     <link href='css/media.css' type="text/css" rel='stylesheet'>
+    
+    
+    </head>
+
+
+<body>
+    <div class="header" id="home" >
+        
+		
+             <div class="header-top " style="background-color:#990008;border-bottom:1px solid black;padding-top:0px;font-size:11px;padding-bottom:1px;width:100%;">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-7 col-sm-7 col-xs-12">
+            <ul class="contact-info custom-list list-inline" style='color:white;margin-top:5px;'>
+              <li><span>India's Largest Online Motorcycle Aggregator</span></li>
+              <li><i class="fa fa-envelope"></i><span>&nbsp;&nbsp;contact@ridibiko.com</span>&nbsp;&nbsp;&nbsp;</li>
+              <li><i class="fa fa-phone"></i><span>&nbsp;&nbsp;+91 9887364521</span></li>
+              <!--<li><i class="fa fa-envelope"></i><span>example@example.com</span></li>-->
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 col-xs-12 text-right pull-right">
+            <div class="contact-right">
+              <ul class="social custom-list list-inline">
+                  <li><a href="http://www.vendor.ridobiko.com" target='blank' style='font-size:12px;text-decoration:none;color:white'><input type='button' value='Become a partner' name='partner' style='background-color:#eb1e29;border-radius:3px;color:white;border:none;margin-top:-100px;'></a></li>
+                <li><a href="#" style='font-size:20px;'><i class="fa fa-facebook-square"></i></a></li>
+                <li><a href="#" style='font-size:20px;'><i class="fa fa-twitter-square"></i></a></li>
+                <li><a href="#" style='font-size:20px;'><i class="fa fa-linkedin-square"></i></a></li>
+              </ul>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+            <div class="header_wrapper navbar-default" style='background-color:#eb1e29;padding-top:0px;padding-bottom:2px;width:100%;z-index:1050;'>
+			<div class="container">
+			<div class="logo">
+                
+				<a href="/index"><img src="{% static 'images/icon.png' %}" alt="" style='width:130px;height:45px;margin-top:-2px;'/></a>
+			</div>
+				<div class="header-top-right" style='margin-top:11px;margin-left:-40px;margin-top:0px;'>
+				 
+                 
+                    <div id='cart' style=''>
+                     <a href="/cart" style='display:block;' class='rent'><i class="fa fa-shopping-cart" aria-hidden="true">&nbsp;Cart</i></a>
+                    </div>
+                    
+                    <div id='login' style=''>
+                     <a href="/login" style='' class='rent'><i class="fa fa-sign-in" aria-hidden="true">&nbsp;Log In</i></a>
+                        
+                         <div class='drop' style='width:auto;height:auto;'> 
+                        <ul style='text-align:left'>
+                         
+                         <li> <a href='/history'>&nbsp;<i class="fa fa-history" aria-hidden="true"></i>&nbsp;Booking history </a></li>
+                            <li> <a href='/rate'>&nbsp;<i class="fa fa-star-o" aria-hidden="true"></i>&nbsp;Rate and review </a></li>
+                            <li>  <a href='/logout'>&nbsp;<i class="fa fa-sign-out" aria-hidden="true"></i>&nbsp;Log out  </a></li>
+                             
+                         
+                         </ul>
+                        
+                        
+                        
+                        </div>
+                        
+                        
+                        
+                        
+                    </div>
+                       
+                    <br clear='all'>
+				</div>
+			<div class="navigation pull-right" style='padding:0;color:white;margin-top:-3px;margin-right:38px;'>	
+			<div style='font-color:white' class='men' style=''>
+              <label class="mobile_menu" for="mobile_menu">
+              <span>Menu</span>
+              </label>
+              <input id="mobile_menu" type="checkbox">
+				<ul class="nav" style=''>
+               
+                     
+           <li class="dropdown1" ><a id='rent' href="index.html" style='' class='rent'>Rent a bike</a>
+           	 
+           </li>        
+            <li ><a id='blog' href="blog.html" style='' class='rent'><i class="fa fa-rss" aria-hidden="true"></i>&nbsp;Blog</a></li>
+            <div class="clearfix"></div>
+          </ul>
+		</div>			
+	 </div>
+			</div>
+		</div>
+    
+    </div>
+
+    
+    <div class='tabl' style=''>
+    {% for i in list %}
+        <div id='collection' style='width:100%;height:auto;'>
+        <div id='ct1{{forloop.counter}}' style='width:33.33%;height:auto;padding-top:19px;float:left;text-align:center;'>
+            
+            <span style='font-size:15px;'><b>Pickup Location: {{i.0.0.0}} </b></span>
+            </div>
+            <div id='ct2{{forloop.counter}}' style='width:33.33%;height:auto;padding-top:19px;float:left;text-align:center; '>
+                
+             <span style='font-size:15px;'><b>Pickup date: {{i.0.0.1}} </b></span>
+            </div>
+            <div id='ct3{{forloop.counter}}' style='width:33.33%;height:auto;padding-top:19px;float:left;text-align:center; '>
+                
+             <span style='font-size:15px;'><b>Drop date: {{i.0.0.2}} </b></span>
+            </div>
+        
+        <br clear='all'>
+        </div>
+        <hr style='border: none;
+    height: 1px;
+    color: lightgrey;
+    background-color: lightgrey;'>
+            <table style='width:100%;'>
+            <thead>
+		<tr>
+                <th> </th>
+                <th></th>
+                <th>Rent</th>
+                <th>Quantity</th>
+                <th>Total</th>
+                </tr>
+		</thead>
+		<tbody>
+    {% for j in i.1 %}
+   <tr>
+                    <td>
+                 <img src="{% static 'images/' %}{{j.1}}" alt='photo' style=''>
+               </td>
+                <td>
+                <span><b>{{j.0}}</b></span><br>
+                    <address>{{j.2}}</address>
+                </td>
+                   <td>
+                    Rs {{j.3}}
+                    </td>
+                    <td>
+                    {{j.4}}
+                    </td> 
+                    <td class="c{{forloop.parentloop.counter}}" id="{{forloop.parentloop.counter}}{{forloop.counter}}">
+                   <i class="fa fa-inr" aria-hidden="true"></i>&nbsp; 
+                    </td> 
+                    
+                </tr>
+                <script type="text/javascript">
+                  $(function(){
+                    $('#{{forloop.parentloop.counter}}{{forloop.counter}}').text("{{j.3}}"*"{{j.4}}");
+                    
+                  });
+                </script>
+                {% endfor %}
+                  <script type="text/javascript">
+                    $(function(){
+                      var k=0;
+                    
+
+                      for (i=1;i<={{i.1|length}};i++){
+                        var a=parseInt($('#'+{{forloop.counter}}+i).text(),'10');
+                        k+=a; 
+                        
+                      }
+                      
+                      $('#s'+{{forloop.counter}}).text(k);  
+                    
+                    });
+                  </script>
+ 
+            
+		</tbody>
+            
+            
+            </table>
+        <hr style='border: none;
+    height: 1px;
+    color: lightgrey;
+    background-color: lightgrey;'>
+            <div id='botm'>
+             <div id='bt1' style='width:33.33%;height:auto;padding-bottom:10px;float:left;text-align:center'>
+              <span style='font-size:15px;'>Ordered on : 13 March 2017</span>
+            </div>
+            <div id='bt2' style='width:33.33%;height:auto;float:left;text-align:center'>
+               <form method="GET" action="/history">
+                <button type='submit' name='cancel' value="{{forloop.counter}}" style='background-color:#454545;border-radius:3px;color:white;border:none;padding:5px;'>Cancel Booking</button>
+
+                
+                </form>
+            </div>
+        <div id='bt3' style='width:33.33%;height:auto;padding-bottom:10px;float:left;text-align:center'>
+              <span  style='font-size:15px;'>Order total :Rs&nbsp;<b id ="s{{forloop.counter}}"> <i class="fa fa-inr" aria-hidden="true"></i>2000</b></span>
+            </div>
+                <br clear='all'> 
+    
+            
+        
+        </div>
+
+    {% endfor %}
+    </div>
+
+    </br>
+    
+     <div id='addrh' style=''>
+        <div id='addr' style='width:100%;height:auto;font-family:arial;'>
+        <div class='d1' style=''>
+            <span><b>Address</b></span><br><br>
+            <address>
+              306-Sikka complex<br> buliding no.5,preet vihar,<br> commercial center, Delhi ,<br>India ,110092
+            
+            </address>
+            
+            
+            </div>
+            <div class='d1' style=''>
+                <span><b>Explore</b></span><br><br>
+            <ul style='list-style-type:none;'>
+                
+                
+                <li style=''>
+                    <a href='blog.html'> Blog </a>
+                
+                </li>
+                <li style=''>
+               <a href='http://www.vendor.ridobiko.com'>  Become a partner </a>
+                
+                </li>
+                
+                </ul>
+            
+            </div>
+            <div class='d1' style=''>
+                <span><b>Help</b></span><br><br>
+            <ul style='list-style-type:none;'>
+                
+                <li style=''>
+               <a href='contact.html' style=''> Contact us </a> 
+                
+                </li>
+                <li style=''>
+                    <a href='policy.html'>Privacy policies</a>
+                
+                </li>
+                <li style=''>
+               <a href='Terms.html' > Terms and conditions</a>
+                
+                </li>
+                
+                </ul>
+            
+            </div>
+            <div id='d4' style=''>
+                <span ><b>Subscribe</b></span><br>
+                <div id='d41' style=''>
+                    <span style='color:#dbdbdb;font-size:14px;'>Sign up for News Letter</span>
+                </div>
+                <form>
+                
+                <input type='text' name='info' style='padding:6px 7px;width:70%;border-radius:3px;border:none;outline:none;color:black' placeholder="Your email address" id='news'>
+                                                                                                                  
+                    <input type='submit' name='sabmit' value='Submit' style='padding:6px 7px;width:70px;margin-top:5px;color:white;background-color:#eb1e29;border:none;border-radius:2px;padding-left:0px;outline:none'>
+                
+                
+                </form>
+                <p style='color:#dbdbdb;font-size:11px;margin-top:5px;'>Register now to get updates on <br>promotions and coupons.</p>
+             
+            
+            </div>
+        <br clear='all'>
+        
+        </div>
+        </div>
+		 <div id='us' style=''>
+        <div id='sp' style=''>
+             
+            <span style=''><h4><b>About Ridobiko</b></h4></span> 
+             </div>
+             <div id='theory' style='height:auto;width:100%;'>
+             
+          <p style='font-family:arial;font-weight:100'> RidoBiko’s fate was written when the idea to rent bike penetrated Rajat’s mind. In the late 2015 Rajat started the concept of renting bikes making the life of many youngsters and bike trip enthusiasts in IIT Roorkee easier. Initial process was through a mobile application and the remaining link was connected manually. Noticing the chance to do good for the society and the potential the concept had, he decided to make it big. He was in search for a team of likeminded individuals with varying skill sets, which he found in IIT Roorkee itself.<br><br>
+              
+              A group of 5 over enthusiastic and hyperactive individuals, this formed our team. We all tuned our mind to achieve one objective “creating a seamless platform for the consumers and vendors, which will provide a hassle free and effortless bike renting experience”. We understood the problems a consumer faced while renting bike and made sure that we solved everyone of them through RidoBIko.<br><br>
+              
+              Booking a bike through RidoBiko is the easiest thing you would have ever done. Just signup to be part of our community of bike riding enthusiasts, select the bike you want and woof your ride is ready to mount. RidoBiko ensures transparency in every step and provides the highest level of service achievable. Join our community, enjoy the thrill of riding through the hills of India or enjoy the serenity of long drives with your partner.<br>
+                 </p>
+                 
+             
+             </div>
+        
+        </div>
+		
+		<div class="footer">
+		 
+			<div class="container">
+				<div class="copyrights" >
+                    <p><span style='font-size:19px;'>&copy; </span>2017 Ridobiko Solutions Pvt. Ltd. | All Right Reserved </p>
+				</div>
+				 
+				  <div class="clearfix"></div>
+			</div>
+		</div>
+    
+    
+    
+    
+    </body>
+
+
+
+</html>

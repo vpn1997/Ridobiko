@@ -1,0 +1,712 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+{% load static %}
+        <title>Ridobiko</title> 
+<link href="{% static 'css/bootstrap.css' %}" rel='stylesheet' type='text/css' />
+
+<script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/personal.js' %}"></script>
+
+<link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css" media="all" />
+    
+    <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<!-- Custom Theme files -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+<!-- dropdown -->
+ 
+<link href="{% static 'css/nav.css' %}" rel="stylesheet" type="text/css" media="all"/>
+    <link href="{% static 'css/popup.css' %}" rel="stylesheet" type="text/css" media="all"/>
+    <link href="{% static 'css/popup2.css' %}" rel="stylesheet" type="text/css" media="all"/>
+    <link href="{% static 'css/head.css' %}" rel="stylesheet" type="text/css" media="all"/>
+
+    
+    <style>
+    
+    @font-face{
+font-family:fonth;
+src:url('fnt/Lato-Regular.ttf')}
+         @font-face{
+font-family:font1;
+src:url('font/Capture it.ttf')}
+           @font-face{
+font-family:font2;
+src:url('font/Coffee with Sugar.ttf')}
+           @font-face{
+font-family:font3;
+src:url('font/Photographs.ttf')}
+           @font-face{
+font-family:font4;
+src:url('font/fonts.ttf')}
+        
+        .toogle {
+	margin-top: 0%;
+    width:62%;
+    padding-left:5%;
+    padding-right: 5%;
+     
+     
+}
+        ul{list-style-type: none}
+        
+         #addr,a{color: #dbdbdb}
+        #addr a:hover{color: white;transition-property: none}
+        #addr span{color: white;font-size: 18px;}
+        #addr address:hover{color:white}
+        .bimg{width:270px;height:220px;border:1px solid green;float:left}
+        .pingle{width:80%;margin-left:10%;margin-top:-580px;}
+        .tile1{width:71%;;height:auto;margin-top:2%;margin-left:15%;padding-bottom:10x;box-shadow: -1px -1px 6px #888888;}
+        .toogle{margin-left:15%;box-shadow: -1px -1px 6px #888888;height:auto;padding-top:5px;width:71%;margin-bottom:30px;padding-bottom:10px;}
+        
+        @media(max-width:1280px)
+        {
+            .pingle{margin-top:-520px;}
+
+        }
+        @media(max-width:1025px)
+        {
+            .pingle{margin-top:-400px;}
+
+        }
+        @media(max-width:800px)
+        {
+            .pingle{margin-top:-250px;}
+
+        }
+        @media(max-width:766px)
+        {   .pingle{margin-left: 2%;width: 100%;}
+            .tile1{width: 96%;margin-right:1%;margin-left:0%}
+            .toogle{width: 96%;margin-right:1%;margin-left:0%}
+
+        }
+        @media(max-width:494px)
+        {
+            .bimg{width: 100%}
+
+        }
+         
+    
+    </style>
+     
+     <link href="{% static 'css/media.css' %}" type="text/css" rel='stylesheet'>
+</head>
+<body>
+   
+	   <div class="header" id="home" >
+        
+		
+             <div class="header-top " style="background-color:#990008;border-bottom:1px solid black;padding-top:0px;font-size:11px;padding-bottom:1px;width:100%;">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-7 col-sm-7 col-xs-12">
+            <ul class="contact-info custom-list list-inline" style='color:white;margin-top:5px;'>
+              <li><span>India's Largest Online Motorcycle Aggregator</span></li>
+              <li><i class="fa fa-envelope"></i><span>&nbsp;&nbsp;contact@ridibiko.com</span>&nbsp;&nbsp;&nbsp;</li>
+              <li><i class="fa fa-phone"></i><span>&nbsp;&nbsp;+91 9887364521</span></li>
+              <!--<li><i class="fa fa-envelope"></i><span>example@example.com</span></li>-->
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 col-xs-12 text-right pull-right">
+            <div class="contact-right">
+              <ul class="social custom-list list-inline">
+                  <li><a href="http://www.vendor.ridobiko.com" target='blank' style='font-size:12px;text-decoration:none;color:white'><input type='button' value='Become a partner' name='partner' style='background-color:#eb1e29;border-radius:3px;color:white;border:none;'></a></li>
+                <li><a href="#" style='font-size:20px;'><i class="fa fa-facebook-square"></i></a></li>
+                <li><a href="#" style='font-size:20px;'><i class="fa fa-twitter-square"></i></a></li>
+                <li><a href="#" style='font-size:20px;'><i class="fa fa-linkedin-square"></i></a></li>
+              </ul>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+            <div class="header_wrapper navbar-default" style='background-color:#eb1e29;padding-top:0px;padding-bottom:2px;width:100%;z-index:1050;'>
+			<div class="container">
+			<div class="logo">
+                
+				<a href="/index"><img src="{% static 'images/icon.png' %}" alt="" style='width:130px;height:45px;margin-top:-2px;'/></a>
+			</div>
+				<div class="header-top-right" style='margin-top:11px;margin-left:-40px;margin-top:0px;'>
+				 
+                 
+                    <div id='cart' style=''>
+                     <a href="/buy" style='display:block;' class='rent'><i class="fa fa-shopping-cart" aria-hidden="true">&nbsp;Cart <span id="spa">{{le}}</span></i></a>
+                    </div>
+                    
+                    <div id='login' style=''>
+                     <a href="/login" style='' class='rent'><i class="fa fa-sign-in" aria-hidden="true">&nbsp;Log In</i></a>
+                        
+                         <div class='drop' style='width:auto;height:auto;'> 
+                        <ul style='text-align:left'>
+                         
+                         <li> <a href='/history'>&nbsp;<i class="fa fa-history" aria-hidden="true"></i>&nbsp;Booking history </a></li>
+                            <li> <a href='/rate'>&nbsp;<i class="fa fa-star-o" aria-hidden="true"></i>&nbsp;Rate and review </a></li>
+                            <li>  <a href='/logout'>&nbsp;<i class="fa fa-sign-out" aria-hidden="true"></i>&nbsp;Log out  </a></li>
+                             
+                         
+                         </ul>
+                        
+                        
+                        
+                        </div>
+                        
+                        
+                        
+                        
+                    </div>
+                       
+                    <br clear='all'>
+				</div>
+			<div class="navigation pull-right" style='padding:0;color:white;margin-top:-3px;margin-right:38px;'>	
+			<div style='font-color:white' class='men' style=''>
+              <label class="mobile_menu" for="mobile_menu">
+              <span>Menu</span>
+              </label>
+              <input id="mobile_menu" type="checkbox">
+				<ul class="nav" style=''>
+               
+                     
+           <li class="dropdown1" ><a id='rent' href="index.html" style='' class='rent'>Rent a bike</a>
+           	 
+           </li>        
+            <li ><a id='blog' href="blog.html" style='' class='rent'><i class="fa fa-rss" aria-hidden="true"></i>&nbsp;Blog</a></li>
+            <div class="clearfix"></div>
+          </ul>
+		</div>			
+	 </div>
+			</div>
+		</div>
+    
+    </div>
+   	 
+       
+       <div class="pingle" style=''>
+       
+     	     
+
+            <div class='tile1' style=''>
+               
+			 <div class='bimg' >
+       <img src="{% static 'images/' %}{{list.0.4}}" style="display: block;margin: auto;width: 100%;">
+            
+            
+            </div>
+			<div class="cont1 span_2_of" style='float:left;padding-left:3%;width:470px; height:220px;'>
+                
+                <lable style='font-weight:bold;font-size:20px;'>{{list.0.0}}</lable>
+				
+				<div class="m_3" style='padding:2px'>
+							  <span class="active">{{list.0.2}}</span>
+							  
+							</div>
+				<ul class="options" style='padding:2px'>
+					<span class="active"><i class="fa fa-inr" aria-hidden="true"></i>&nbsp;{{list.0.3}}</span>
+                    <span class="active" style='margin-left:10%;color:red;font-size:14px;'>{{left}} Bike left</span>
+					<div class="clear"></div>
+				</ul>
+        <script type="text/javascript">
+          $(function(){
+          $.ajax({
+      //The URL to process the request
+        'url' : '/add',
+      //The type of request, also known as the "method" in HTML forms
+      //Can be 'GET' or 'POST'
+        'type' : 'GET',
+      //Any post-data/get-data parameters
+      //This is optional
+        
+      //The response from the server
+        'success' : function(data) {
+        //You can use any jQuery/JavaScript here!!!
+          $('#spa').text(data);
+         
+        }
+      });
+
+          });
+         </script>
+                
+				<div class="btn_form">
+				   <form action="/add" method="get">
+           <input type="text" name="id" value="{{list.0.1}}" style="display: none;">
+
+					  <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a id="cart2" class="active-icon c1" data-id={{forloop.counter}} data-bid="{{i.5}}" data-nam="{{i.0}}" data-ven="{{i.1}}"href="#">Add To Cart </a>
+           <script type="text/javascript">
+                $(function(){
+                  var l=0;
+                  $('#cart2').click(function(){
+                    
+                    
+                    id={{list.0.1}}
+
+                    $.ajax({
+                        //The URL to process the request
+                          'url' : '/add',
+                        //The type of request, also known as the "method" in HTML forms
+                        //Can be 'GET' or 'POST'
+                          'type' : 'GET',
+                        //Any post-data/get-data parameters
+                        //This is optional
+                          'data' : {  
+                            
+                            'id':id,
+                            
+
+
+                                                        
+                          },
+                        //The response from the server
+                          'success' : function(data) {
+                          //You can use any jQuery/JavaScript here!!!
+                          alert("dffs");
+                            $('#spa').text(data);
+                           
+                          }
+                        });
+                  });
+                });
+              </script>
+                       
+				  </form>
+				</div>
+				 
+    			 
+    			
+                 
+			</div>
+                <br clear='all'>
+                </div>
+           <br clear='all'>
+			<div class="clear"></div>
+     
+     
+        
+ 	 
+	 <div class="toogle" style=''>
+     	 <div style='width:auto;height:auto;margin-top:30px;margin-left:0%;float:left;'>
+    <span style='font-size:20px;font-family:arial'>  Customer rate and  review</span>
+      </div>
+     	 
+         <div style='width:auto;height:30px;margin-top:3.5px;margin-left:2%;float:right;' class='pform'>
+    <form>
+        <ul>
+          <li id="ll1"><label for="rat1" class='full'> <i class="fa fa-star" aria-hidden="true"></i></label><input type='radio' name='rat' id='rat1' value='1'></li>
+            
+            
+        <li id="ll2"><label for='rat2' class='full'><i class="fa fa-star" aria-hidden="true"></i></label><input type='radio' name='rat' id='rat2' value='2'></li>
+        <li id="ll3"><label for='rat3' class='full'><i class="fa fa-star" aria-hidden="true"></i></label><input type='radio' name='rat' id='rat3' value='3'></li>
+        <li id="ll4"><label for='rat4' class='full'><i class="fa fa-star" aria-hidden="true"></i></label><input type='radio' name='rat' id='rat4' value='4'></li>
+        <li id="ll5"><label for='rat5' class='full'><i class="fa fa-star" aria-hidden="true"></i></label><input type='radio' name='rat' id='rat5' value='5'></li>
+          </ul>
+            
+          
+          </form>
+          <script>
+          
+         $(function(){
+
+            $('#ll'+{{k}}).addClass('active');
+            $('#ll'+{{k}}).prevAll().addClass('secondary-active');
+            
+
+          });
+          
+          </script>
+           
+         <p style="margin-left:5px;font-size:12px;"> {{k}} out of 5</p>
+      </div>
+
+        <br clear='all'>
+        {% for i in review %}
+        <hr style='border: none;
+    height: 1px;
+    color: lightgrey;
+    background-color: lightgrey;'>
+         
+         <ul>
+         <li>
+             <div class='rform' style='width:100%;height:auto;'>
+             <form>
+        <ul>
+          <li id="l1{{forloop.counter}}" ><label for="rat11" class='full'> <i class="fa fa-star" aria-hidden="true"></i></label><input type='radio' name='rat' id='rat{{forloop.counter}}' value='1'></li>
+            
+            
+        <li id="l2{{forloop.counter}}"><label for='rat22' class='full'><i class="fa fa-star" aria-hidden="true"></i></label><input type='radio' name='rat' id='rat2{{forloop.counter}}' value='2'></li>
+        <li id="l3{{forloop.counter}}"><label for='rat33' class='full'><i class="fa fa-star" aria-hidden="true"></i></label><input type='radio' name='rat' id='rat3{{forloop.counter}}' value='3'></li>
+        <li id="l4{{forloop.counter}}"><label for='rat44' class='full'><i class="fa fa-star" aria-hidden="true"></i></label><input type='radio' name='rat' id='rat4{{forloop.counter}}' value='4'></li>
+        <li id="l5{{forloop.counter}}"><label for='rat55' class='full'><i class="fa fa-star" aria-hidden="true"></i></label><input type='radio' name='rat' id='rat5{{forloop.counter}}' value='5'></li>
+            <li id="l6{{forloop.counter}}" style='color:black;text-shadow:none;font-weight:bold'>good</li>
+          </ul>
+                 
+            
+          
+          </form>
+          <script>
+          
+          
+                           
+                           
+                           
+          $(function(){
+            $('#l'+{{i.1}}+{{forloop.counter}}).addClass('active');
+              $('#l'+{{i.1}}+{{forloop.counter}}).prevAll().addClass('secondary-active');
+              var k='';
+            switch({{i.1}}) {
+              case  1:
+                    k='very poor'
+                    break;
+              case 2:
+                    k='poor'
+                    break;
+              case 3:
+                    k='average'
+                    break;
+              case 4:
+                    k='good'
+                    break;
+              case 5:
+                    k='very good'
+                    break;
+              default:
+                      k="good "
+            }
+            
+
+            $('#l6'+{{forloop.counter}}).text(k);
+          });
+          
+          </script>
+              <span style='font-size:12px;color:grey'>By {{i.0}} on {{i.3}}</span><br>
+                 <p style='font-size:14px;font-family:fonth'>
+                 <strong>{{i.2}} </strong> 
+                 
+                 
+                 </p>
+             </div>
+             {% endfor %}
+             
+             
+             			
+	 
+     
+     <div class="clear"></div>
+	 
+     </div>
+    <div id="myModalp" class="modalp">
+
+  <!-- Modal content -->
+  <div class="modal-contentp">
+     
+      <span class="closep">&times;</span>
+      <div id='top' style='width:100%;height:auto;padding-top:0%;padding-right:60px;'>
+          <div id='imge' style='width:105px;height:auto;float:left;margin-left:5%;margin-top:1.8%'>
+      <img src='#' alt='Bike photo' style='width:100%;height:50px;;'>
+      </div>
+          <div id='bname' style='width:auto;padding:0px 5px 0px 5px;height:55px;text-align:center;vertical-align:center;float:left;line-height:55px;margin-top:1.8%'>
+          <span><b> Bike Name </b></span>
+          
+          </div>
+          <div id='total' style='width:auto;height:auto;float:right;line-height:40px;margin-top:2%;'>
+          
+          <span><b>40 Total Bikes Left</b></span>
+          </div>
+           <div style='clear:left;clear:right'></div>
+           
+      </div>
+      <hr  style='border: none;height: 1px;color: lightgrey;background-color: lightgrey;'>
+      <div class='lis' style='width:100%;height:auto;'>
+      
+      <div class='mark' style='width:33.33%;height:100px;float:left;text-align:center;padding:0px;background-color:white;padding-top:8px;'>
+          <span>Landmark </span><br><br> <span>10 Bike Left</span>
+          
+          </div>
+          <div class='star' style='width:33.33%;height:100px;float:left'>
+              
+              
+              
+              
+          <div style='width:auto;height:auto;text-align:center;' class='reform'>
+    <form>
+        <ul class='biker'>
+          <li><label for="rat1" class='full'> <i class="fa fa-star" aria-hidden="true"></i></label><input type='radio' name='rrat' id='rat1' value='1'></li>
+            
+            
+        <li><label for='rat2' class='full'><i class="fa fa-star" aria-hidden="true"></i></label><input type='radio' name='rrat' id='rat2' value='2'></li>
+        <li><label for='rat3' class='full'><i class="fa fa-star" aria-hidden="true"></i></label><input type='radio' name='rrat' id='rat3' value='3'></li>
+        <li><label for='rat4' class='full'><i class="fa fa-star" aria-hidden="true"></i></label><input type='radio' name='rrat' id='rat4' value='4'></li>
+        <li><label for='rat5' class='full'><i class="fa fa-star" aria-hidden="true"></i></label><input type='radio' name='rrat' id='rat5' value='5'></li>
+          </ul>
+            
+          
+          </form>
+          <script>
+          
+          $('.reform li').on('click',function(){
+                           $('.reform li').removeClass('active');
+              $('.reform li').removeClass('secondary-active');
+                           $(this).addClass('active');
+              $(this).prevAll().addClass('secondary-active');
+                           
+                           })
+          
+                        </script>
+                                    <script>
+$(document).ready(function(){
+    $(".tcp").click(function(){
+        $(".para").animate({
+            
+            height:'toggle',
+            opacity:'toggle',
+            
+        },200);
+    });
+});
+</script>
+              
+              <button class='tcp' style='width:60px;padding:4px 7px;border:grey;border-radius:5px;margin-top:2px;'>T&C</button>
+              </div>
+              
+              
+              
+              
+              
+              
+          </div>
+          <div class='rs' style='width:33.33%;height:100px;float:left;text-align:center;background-color:white;padding-top:8px;'>
+              <span><b><i class="fa fa-inr" aria-hidden="true"></i>&nbsp;50ee</b> </span><br> <br>
+              <<a id="cartoon" class="active-icon c1" href="#"> </a></li>
+              <script type="text/javascript">
+              $(function(){
+                $('#cartoon').on('click',function(){
+                  alert("D");
+
+              $.ajax({
+                        //The URL to process the request
+                          'url' : '/add',
+                        //The type of request, also known as the "method" in HTML forms
+                        //Can be 'GET' or 'POST'
+                          'type' : 'GET',
+                        //Any post-data/get-data parameters
+                        //This is optional
+                          'data' : {  
+                            
+                            'id':"{{id}}",
+                            'vendor':vend,
+                            'name':name,
+
+
+                                                        
+                          },
+                        //The response from the server
+                          'success' : function(data) {
+                          //You can use any jQuery/JavaScript here!!!
+                            $('#spa').text(data);
+                           
+                          }
+                        });
+               });
+              });
+              </script>
+          
+          </div>
+    <br clear='all'>
+      
+      </div>
+
+    <div class='togg' style='width:100%;height:auto;'>
+      
+      <p style='font-family:arial;font-size:12px;display:none' class='para'> HELLO WORLD. HELLO WORLD. HELLO WORLD. HELLO WORLD. HELLO WORLD. HELLO WORLD. HELLO WORLD. HELLO WORLD. HELLO WORLD. HELLO WORLD. HELLO WORLD. HELLO WORLD. HELLO WORLD. HELLO WORLD. HELLO WORLD. HELLO WORLD. HELLO WORLD. HELLO WORLD. HELLO WORLD. HELLO WORLD. HELLO WORLD. HELLO WORLD. HELLO WORLD. HELLO WORLD. HELLO WORLD. HELLO WORLD. HELLO WORLD. HELLO WORLD. HELLO WORLD. HELLO WORLD. HELLO WORLD. HELLO WORLD. HELLO WORLD. HELLO WORLD. HELLO WORLD. HELLO WORLD. HELLO WORLD. HELLO WORLD. HELLO WORLD. HELLO WORLD. HELLO WORLD. </p>
+      
+      </div>
+      
+       <hr  style='border: none;height: 1px;color: lightgrey;background-color: lightgrey;width:80%'>
+      <div class='lis' style='width:100%;height:100px;'>
+      
+      <div class='mark' style='width:33.33%;height:100px;float:left;text-align:center;background-color:white;padding-top:8px;'>
+          <span>Landmark </span><br><br> <span>10 Bike Left</span>
+          
+          </div>
+          <div class='star' style='width:33.33%;height:100px;float:left;'>
+              
+              
+              
+              
+          <div style='width:auto;height:auto;text-align:center;' class='reform'>
+    <form>
+        <ul class='biker'>
+          <li><label for="reat1" class='full'> <i class="fa fa-star" aria-hidden="true"></i></label><input type='radio' name='rrat' id='rerat' value='1'></li>
+            
+            
+        <li><label for='reat2' class='full'><i class="fa fa-star" aria-hidden="true"></i></label><input type='radio' name='rrat' id='rerat' value='2'></li>
+        <li><label for='reat3' class='full'><i class="fa fa-star" aria-hidden="true"></i></label><input type='radio' name='rrat' id='rerat' value='3'></li>
+        <li><label for='reat4' class='full'><i class="fa fa-star" aria-hidden="true"></i></label><input type='radio' name='rrat' id='rerat' value='4'></li>
+        <li><label for='reat5' class='full'><i class="fa fa-star" aria-hidden="true"></i></label><input type='radio' name='rrat' id='rerat' value='5'></li>
+          </ul>
+            
+          
+          </form>
+          <script>
+          
+          $('.reform li').on('click',function(){
+                           $('.reform li').removeClass('active');
+              $('.reform li').removeClass('secondary-active');
+                           $(this).addClass('active');
+              $(this).prevAll().addClass('secondary-active');
+                           
+                           })
+          
+                        </script>
+ 
+              
+             <button class='tcp' style='width:60px;padding:4px 7px;border:grey;border-radius:5px;'>T&C</button>
+              </div>
+              
+              
+              
+              
+              
+              
+          </div>
+          <div class='rs' style='width:33.33%;height:100px;float:left;text-align:center;background-color:white;padding-top:8px'>
+              <span><b><i class="fa fa-inr" aria-hidden="true"></i>&nbsp;500</b> </span><br> 
+              <br>
+              <button type='button' name='add' style='background-color:#454545;border:none;color:white;padding:4px 7px;border-radius:3px'>Add to cart</button>
+          
+          </div>
+      <br clear='all'>
+      
+      </div>
+ 
+    <div class='togg' style='width:100%;height:auto;clear:left;clear:right'>
+      
+    <!--  <p style='font-family:arial;font-size:12px;display:none' class='para'> HELLO WORLD. HELLO WORLD. HELLO WORLD. HELLO WORLD. HELLO WORLD. HELLO WORLD. HELLO WORLD. HELLO WORLD. HELLO WORLD. HELLO WORLD. HELLO WORLD. HELLO WORLD. HELLO WORLD. HELLO WORLD. HELLO WORLD. HELLO WORLD. HELLO WORLD. HELLO WORLD. HELLO WORLD. HELLO WORLD. HELLO WORLD. HELLO WORLD. HELLO WORLD. HELLO WORLD. HELLO WORLD. HELLO WORLD. HELLO WORLD. HELLO WORLD. HELLO WORLD. HELLO WORLD. HELLO WORLD. HELLO WORLD. HELLO WORLD. HELLO WORLD. HELLO WORLD. HELLO WORLD. HELLO WORLD. HELLO WORLD. HELLO WORLD. HELLO WORLD. HELLO WORLD. </p> -->
+      
+      </div>
+      
+       <hr  style='border: none;height: 1px;color: lightgrey;background-color: lightgrey;width:80%;'>
+  </div>
+
+</div>
+    <script>
+var modal = document.getElementById('myModalp');
+var btnp = document.getElementById("myBt");
+var span = document.getElementsByClassName("closep")[0];
+btnp.onclick = function() {
+    modal.style.display = "block";
+}
+span.onclick = function() {
+    modal.style.display = "none";
+}
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+	  <div id='addrh' style=''>
+        <div id='addr' style='width:100%;height:auto;font-family:arial;'>
+        <div class='d1' style=''>
+            <span><b>Address</b></span><br><br>
+            <address>
+              306-Sikka complex<br> buliding no.5,preet vihar,<br> commercial center, Delhi ,<br>India ,110092
+            
+            </address>
+            
+            
+            </div>
+            <div class='d1' style=''>
+                <span><b>Explore</b></span><br><br>
+            <ul style='list-style-type:none;'>
+                
+                
+                <li style=''>
+                    <a href='blog.html'> Blog </a>
+                
+                </li>
+                <li style=''>
+               <a href='http://www.vendor.ridobiko.com'>  Become a partner </a>
+                
+                </li>
+                
+                </ul>
+            
+            </div>
+            <div class='d1' style=''>
+                <span><b>Help</b></span><br><br>
+            <ul style='list-style-type:none;'>
+                
+                <li style=''>
+               <a href='contact.html' style=''> Contact us </a> 
+                
+                </li>
+                <li style=''>
+                    <a href='policy.html'>Privacy policies</a>
+                
+                </li>
+                <li style=''>
+               <a href='Terms.html' > Terms and conditions</a>
+                
+                </li>
+                
+                </ul>
+            
+            </div>
+            <div id='d4' style=''>
+                <span ><b>Subscribe</b></span><br>
+                <div id='d41' style=''>
+                    <span style='color:#dbdbdb;font-size:14px;'>Sign up for News Letter</span>
+                </div>
+                <form>
+                
+                <input type='text' name='info' style='padding:6px 7px;width:70%;border-radius:3px;border:none;outline:none;color:black' placeholder="Your email address" id='news'>
+                                                                                                                  
+                    <input type='submit' name='sabmit' value='Submit' style='padding:6px 7px;width:70px;margin-top:5px;color:white;background-color:#eb1e29;border:none;border-radius:2px;padding-left:0px;outline:none'>
+                
+                
+                </form>
+                <p style='color:#dbdbdb;font-size:11px;margin-top:5px;'>Register now to get updates on <br>promotions and coupons.</p>
+             
+            
+            </div>
+        <br clear='all'>
+        
+        </div>
+        </div>
+		 <div id='us' style=''>
+        <div id='sp' style=''>
+             
+            <span style=''><h4><b>About Ridobiko</b></h4></span> 
+             </div>
+             <div id='theory' style='height:auto;width:100%;'>
+             
+          <p style='font-family:arial;font-weight:100'> RidoBiko fate was written when the idea to rent bike penetrated Rajat mind. In the late 2015 Rajat started the concept of renting bikes making the life of many youngsters and bike trip enthusiasts in IIT Roorkee easier. Initial process was through a mobile application and the remaining link was connected manually. Noticing the chance to do good for the society and the potential the concept had, he decided to make it big. He was in search for a team of likeminded individuals with varying skill sets, which he found in IIT Roorkee itself.<br><br>
+              
+              A group of 5 over enthusiastic and hyperactive individuals, this formed our team. We all tuned our mind to achieve one objective "creating a seamless platform for the consumers and vendors, which will provide a hassle free and effortless bike renting experience". We understood the problems a consumer faced while renting bike and made sure that we solved everyone of them through RidoBIko.<br><br>
+              
+              Booking a bike through RidoBiko is the easiest thing you would have ever done. Just signup to be part of our community of bike riding enthusiasts, select the bike you want and woof your ride is ready to mount. RidoBiko ensures transparency in every step and provides the highest level of service achievable. Join our community, enjoy the thrill of riding through the hills of India or enjoy the serenity of long drives with your partner.<br>
+                 </p>
+                 
+             
+             </div>
+        
+        </div>
+		
+		<div class="footer">
+		 
+			<div class="container">
+				<div class="copyrights" >
+                    <p><span style='font-size:19px;'>&copy; </span>2017 Ridobiko Solutions Pvt. Ltd. | All Right Reserved </p>
+				</div>
+				 
+				  <div class="clearfix"></div>
+			</div>
+		</div>
+    
+        
+</body>
+</html>

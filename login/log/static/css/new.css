@@ -1,0 +1,16 @@
+.quot1,.quot2,.quot3,.quot4{display: none;margin-top:-225px;height: auto;padding-top: 20px;z-index: 5550;text-align: left;width: 80%;margin-left:10%;font-size: 20px;font-family: arial;}
+        .img1,.img2,.img3,.img4{margin-top: 2%; float:left;width: 120px;height: 120px;padding: 4px; background-size: 100%;transition: 0.5s;}
+.quot1{display: block}
+ 
+
+.quot1 span,.quot2 span,.quot3 span,.quot4 span{margin-left: 0px;}
+.cr{color: red;width: 200px;}
+       
+.book2{border-right: solid 1px rgba(0,0,0,0.1);}
+
+.parent img{width:50px;height:50px;}
+
+.img1:hover {background-size: 105%;cursor: pointer}
+.img2:hover {background-size: 105%;cursor: pointer}
+.img3:hover {background-size: 105%;cursor: pointer}
+.img4:hover {background-size: 105%;cursor: pointer}

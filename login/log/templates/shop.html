@@ -1,0 +1,514 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Pakhi an E-Commerce online Shopping Category Flat Bootstarp responsive Website Template| Products :: w3layouts</title>
+{% load static %}
+<link href="{% static 'css/bootstrap.css' %}" rel='stylesheet' type='text/css' />
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="{% static 'js/jquery.min.js' %}"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ 
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!-- Custom Theme files -->
+<link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css" media="all" />
+<link href="{% static 'css/form.css' %}" rel="stylesheet" type="text/css" media="all" />
+    <link href="{% static 'css/popup2.css' %}" rel="stylesheet" type="text/css" media="all" />
+<!-- Custom Theme files -->
+     <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ 
+ 
+<!--webfont-->
+<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+<!-- dropdown -->
+<script src="{% static 'js/jquery.easydropdown.js' %}"></script>
+<link href="{% static 'css/nav.css' %}" rel="stylesheet" type="text/css" media="all"/>
+ 
+    <style>
+        #loc a:hover{color: red;}
+        .icon1 a:hover{color: red;}
+    .affix {
+        position:fixed;
+      top: -100px; 
+
+        
+  }
+    </style>
+</head>
+<body>
+	<!-- header-section-starts -->
+	<div class="c-header" id="home" style='border:1px solid red'>
+		 <div class="top-header navbar-default navbar-fixed-top fixed" style='background-color:#eb1e29;padding-bottom:.7em'>
+            
+			<div class="container">
+			<div class="logo">
+				<a href="/index"><img src="{% static 'images/icon.png' %}" alt="" style='width:160px;height:60px;margin-top:-20px;'/></a><br><span >&nbsp;&nbsp;<a href='#' style='color:white'>&#8592;&nbsp;Back</a></span>
+			</div>
+				<div class="header-top-right" style='margin-top:11px;margin-left:-40px;'>
+				 
+				 
+					<!--    <div class="cart" style='margin-left:-50px;margin-top:13px;font-size:18px;clear:all;border:1px solid white'>
+							 
+                                <a href="contact.html" style='color:white;'><i class="fa fa-shopping-cart" aria-hidden="true">&nbsp;Cart</i></a>
+                            
+						 
+						</div>
+				    
+					 <div class='carti' style='margin-top:-25px;margin-left:35px;clear:all;border:1px solid white'>
+
+                    <a href="#" style='color:white;font-size:18px;'><i class="fa fa-sign-in" aria-hidden="true">&nbsp;Log In</i></a>
+                         </div>-->
+                    
+                    <div id='cas' style='float:left;display:block'>
+                     <a href="/buy" style='color:white;font-size:18px;display:block;'><i class="fa fa-shopping-cart" aria-hidden="true">&nbsp;Cart <span id="spa">{{len}}</span></i></a>
+                    </div>
+                    
+                    <div id='pas' style='float:left;margin-left:35px;font-size:18px;'>
+                     <a href="/login" style='color:white;'><i class="fa fa-sign-in" aria-hidden="true">&nbsp;Log In</i></a>
+                    </div>
+                    <br clear='all'>
+				</div>
+			<div class="navigation pull-left" style='padding-right:50px;color:white;margin-top:-10px;'>	
+			<div style='font-color:white' style='border:1px solid white'>
+              <label class="mobile_menu" for="mobile_menu">
+              <span>Menu</span>
+              </label>
+              <input id="mobile_menu" type="checkbox">
+				<ul class="nav pull-left" style='margin-left:10px;'>
+                <form class="form-inline " style=''>
+                     
+           <li style='float:left'> 
+                <div class="form-group" style=''>
+
+      <form method="GET" action="/cart">
+      <label for="focusedInput">Pickup location</label><br>
+        <select class="form-control" name="location" id="focusedInput" style=''>
+        	{% for i in list %}
+        		 <option>{{i}}</option>
+        	{%endfor%}
+            
+        
+        
+        </select>
+    </div>
+           	 
+           </li>        
+            <li  style='float:left'> 
+                     <div class="form-group" style='padding-left:10px;'>
+      <label for="focusedInput">Pickup date</label><br>
+       <input class="form-control" name="date1" id="focusedInput" type='date' style='width:130px;padding:5px;'>  
+       
+    </div>
+                    </li>
+                    <li  style='float:left'> 
+                      <div class="form-group" style='padding-left:10px;'>
+      <label for="focusedInput">Pickup time</label><br>
+           <select class="form-control" id="focusedInput" name="time1" style='width:110px;padding:5px;'>
+           
+           <option>1 AM</option> <option>2 AM</option> <option>3 AM</option> <option>4 AM</option> <option>5 AM</option> <option>6 AM</option>
+           
+           
+           </select>
+    </div>
+                    </li>
+                    <li  style='float:left'> 
+                      <div class="form-group" style='padding-left:10px;'>
+      <label for="focusedInput">Drop date</label><br>
+       <input class="form-control" id="focusedInput" name="date2" type='date' style='width:130px;padding:5px;'>
+    </div>
+                    </li>
+                    <li  style='float:left'> 
+                     <div class="form-group" style='padding-left:10px;'>
+      <label for="focusedInput">Drop time</label><br>
+     <select class="form-control" name="time2" id="focusedInput"  style='width:110px;padding:5px;'>
+           
+           <option>1 AM</option> <option>2 AM</option> <option>3 AM</option> <option>4 AM</option> <option>5 AM</option> <option>6 AM</option>
+           
+           
+           </select>
+    </div>
+                    </li>
+                    <li style='float:left'>
+                    
+                     <div class="form-group" style='padding-left:10px;'>
+     <button type="submit" class="btn btn-info" style='padding-top:2px;border-radius:3px;height:30px;margin-top:20px;'>
+      <i class="fa fa-search" aria-hidden="true"></i> Search
+    </button>
+    </div>
+                    </li>
+                    
+                    
+                    
+                    
+             </form>
+            <div class="clearfix"></div>
+          </ul>
+		</div>			
+	 </div>
+			</div>
+		</div>
+		</div>
+		<!-- start Dresses-page -->
+	<!-- content-section-starts -->
+	 
+			   <div class="container" style='margin-top:120px;'>
+	   <div class="ft-ball">
+		<div class="cont span_2_of_3">
+		  <div class="mens-toolbar" style='text-align:right;margin-top:-10px;'>
+              <div class="sort" style='text-align:right;width:100%'>
+               	<div class="sort-by" style='text-align:right;'>
+               	<form action="/fil" method="GET">
+		            <label>Sort By</label>
+		            
+		             <select class="select1" name="hero">
+		                            <option value="1" name="1">
+		                    Popularity              
+		                     </option>
+		                            <option value="2" name="2">
+		                    Price : High to Low              
+		                     </option>
+		                            <option value="3" name="3">
+		                    Price : Low to High              
+		                     </option>
+		            </select>
+
+		            <input id="subs" type="submit" style="display: none;" name="val">
+		            </form>
+		            <script type="text/javascript">
+		            	$(function(){
+		            		$('.select1').change(function(){
+		            			var val=this.value;
+		            			$('#subs').val(val);
+		            			$('#subs').click();
+
+		            		});
+		            	});
+		            </script>
+		            
+		            <a href=""><img src="{% static 'images/arrow2.gif' %}" alt="" class="v-middle"></a>
+               </div>
+    		</div>
+	         
+     	    <div class="clearfix"></div>
+	       </div>
+	       <script type="text/javascript">
+	       	$(function(){
+	       	$.ajax({
+		  //The URL to process the request
+		    'url' : '/add',
+		  //The type of request, also known as the "method" in HTML forms
+		  //Can be 'GET' or 'POST'
+		    'type' : 'GET',
+		  //Any post-data/get-data parameters
+		  //This is optional
+		    
+		  //The response from the server
+		    'success' : function(data) {
+		    //You can use any jQuery/JavaScript here!!!
+		    
+		      $('#spa').text(data);
+		     
+		    }
+		  });
+
+	       	});
+	       </script>
+			    <div class="box1">
+			    {% for i in bike %}
+				   <div class="col_1_of_single1 span_1_of_single1" style='height:auto;'>
+				     <div class="view1 view-fifth1" >
+				  	  <div class="top_box">
+                          <div id='bname' style='float:left;width:80px;height:22px;margin-top:-5px;'>
+					  	<h3 style='font-size:20px;'><b>{{ i.0}}</b></h3>
+					  	 </div>
+                          <div id='cname' style='float:right;width:60px;height:22px;margin-top:-2px;text-align:right;'>
+                              <span style='font-size:13px;color:red;'><strong>Bikes Left : {{i.4}}</strong></span>
+					  	 </div>
+                          <br clear='all'>
+						<a href="#">
+				         <div class="grid_img">
+						   <div class="css3"><img src="{% static 'images/' %}{{i.3}}" alt=""/></div>
+					          <div class="mask1">
+					          <form action="/detail" method="GET">
+					          <input type="text" name="id" style="display: none;" value="{{i.5}}">
+					          >
+					          <input type="text" name="left" style="display: none;" value="{{i.4}}">
+					          >
+	                       		<input type="submit" class="info" style="color:white;text-decoration:none" name="Rendor's Review" value="Rendor's Review" data-value="g">
+	                       		</form>
+			                  </div>
+	                    </div>
+                       <div class="price" style='width:50%;height:25px;float:left;padding-bottom:5px;'>Rs {{i.2}}</div><div id='vv' style='width:50%;height:25px;float:left;text-align:right;'><address><strong>Vendor :{{i.1}}<strong></strong></address></div>
+                          </a>
+					   </div>
+                         
+					    </div>
+						<div class="rtng" style='clear:all'>
+					    <form action="" class="sky-form">
+						     <fieldset>					
+							   <section>
+							     <div class="rating">
+									<input type="radio" name="stars-rating" id="stars-rating-5">
+									<label for="stars-rating-5"><i class="icon-star"></i></label>
+									<input type="radio" name="stars-rating" id="stars-rating-4">
+									<label for="stars-rating-4"><i class="icon-star"></i></label>
+									<input type="radio" name="stars-rating" id="stars-rating-3">
+									<label for="stars-rating-3"><i class="icon-star"></i></label>
+									<input type="radio" name="stars-rating" id="stars-rating-2">
+									<label for="stars-rating-2"><i class="icon-star"></i></label>
+									<input type="radio" name="stars-rating" id="stars-rating-1">
+									<label for="stars-rating-1"><i class="icon-star"></i></label><span class="rtng">(5)<span>
+									<div class="clearfix"></div>
+                                     </span></span>
+								 </div>
+							  </section>
+						    </fieldset>
+						  </form>
+						  </div>
+						 <ul class="list2">
+						  <li>
+						  	<img src="{% static 'images/plus.png' %}" alt=""/>
+						  	<ul class="icon1 sub-icon1 profile_img">
+						  	
+							  <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a id="a{{forloop.counter}}" class="active-icon c1" data-id={{forloop.counter}} data-bid="{{i.5}}" data-nam="{{i.0}}" data-ven="{{i.1}}"href="#">Add To Cart </a>
+							<script type="text/javascript">
+								$(function(){
+									var l=0;
+									$('[data-id="{{forloop.counter}}"').click(function(){
+										
+										
+										id=$(this).attr("data-bid")
+										name=$(this).attr("data-nam")
+										vend=$(this).attr("data-ven")
+
+										$.ajax({
+											  //The URL to process the request
+											    'url' : '/add',
+											  //The type of request, also known as the "method" in HTML forms
+											  //Can be 'GET' or 'POST'
+											    'type' : 'GET',
+											  //Any post-data/get-data parameters
+											  //This is optional
+											    'data' : {	
+											      
+											      'id':id,
+											      'vendor':vend,
+											      'name':name,
+
+
+											      											      
+											    },
+											  //The response from the server
+											    'success' : function(data) {
+											    //You can use any jQuery/JavaScript here!!!
+
+											      $('#spa').text(data);
+											     
+											    }
+											  });
+									});
+								});
+							</script>
+							<script type="text/javascript">
+
+							</script>
+							  </li>
+							 </ul>
+						   </li>
+					     </ul>
+                       
+			    	    <div class="clear"></div>
+
+			    	</div>
+			    	 
+
+
+			    {%endfor%}
+
+				  <div class="clearfix"></div>
+
+			  </div>
+
+			   
+			  
+			  </div>
+
+     	    <div class="nav nav-pills nav-stacked" style='width:230px;' data-spy="affix" data-offset-top="500">
+				
+               
+						 
+		        <section  class="sky-form">
+					<h4>Brand</h4>
+						<div class="row row1 scroll-pane">
+							<div class="col col-4">
+							<form action="/fil" method="GET">
+							{% for b in brands %}
+								<label class="checkbox" data-v={{b}}><input type="checkbox" class="ch1" name="brand" value={{b}} id="{{b}}" ><i></i>{{b}}</label>
+							
+							{%endfor%}
+							<label class="checkbox" ><input type="checkbox"  id="def" name="brand"   ><i></i>No filter</label>
+							
+							<input type="submit" name="submit" id="subs22" style="display: none;">
+							</form>
+							<script type="text/javascript">
+								$(function(){
+									$('.ch1').change(function(){
+										var brand=this.value;
+
+										
+										$('#subs22').val(brand);
+										
+		            					$('#subs22').click();
+		            			
+										
+								});
+									$('#def').click(function(){
+
+										 $(".ch1:checkbox").prop("checked",false);
+										 $('#subs22').click();
+									});
+								});
+							</script>
+							</div>
+							
+						</div>
+		       </section>
+
+		       <section  class="sky-form">
+					<h4>Location</h4>
+						<div class="row row1 scroll-pane">
+							
+							<div class="col col-4">
+							<form action="/fil" method="GET">
+							{% for l in landmark %}
+								<label class="checkbox"><input type="checkbox" name="land"  class="ch2" value={{l}}><i></i><strong>{{l}}</strong></label>
+							{%endfor%}
+							<label class="checkbox"><input type="checkbox" name="land"  id="def2" ><i></i><strong>No filter</strong></label>
+							<input type="submit" name="submit" id="subs3" style="display: none;">
+							</form>
+							<script type="text/javascript">
+								$(function(){
+									$('.ch2').change(function(){
+										var location=this.value;
+										$('#subs3').val(location);
+		            					$('#subs3').click();
+
+								});
+									$('#def2').click(function(){
+										
+										 $(".ch2:checkbox").prop("checked",false);
+										 $('#subs3').click();
+									});
+									});
+							</script>
+								
+						</div>
+							
+		       </section>
+		       <section  class="sky-form">
+					<h4>Price</h4>
+						<div class="row row1 scroll-pane" style=''>
+							<div class="col col-4">
+							<form action="/fil" method="GET">
+								<label class="checkbox"><input type="checkbox" class="ch3" value="1" name="checkbox"><i></i>Rs 500 -  Rs 1000</label>
+								<label class="checkbox"><input type="checkbox" class="ch3" value="2" name="checkbox"><i></i>Rs 1000 -  Rs 2000</label>
+								<label class="checkbox"><input type="checkbox" class="ch3" value="3" name="checkbox"><i></i>Rs 2000 -  Rs 3000</label>
+								<label class="checkbox"><input type="checkbox" class="ch3" value="4" name="checkbox"><i></i>Rs 3000 -  Rs 4000</label>
+                                <label class="checkbox"><input type="checkbox" class="ch3" value="5" name="checkbox"><i></i>Rs 4000 -  Rs 5000</label>
+                                <label class="checkbox"><input type="checkbox" class="ch3" value="6" name="checkbox"><i></i>Rs 5000 -  Rs 6000</label>
+                                <label class="checkbox"><input type="checkbox" class="ch3" value="7" name="checkbox"><i></i>Rs 6000 -  Rs 10000</label>
+                                 
+                                <label class="checkbox"><input type="checkbox" class="ch3" value="8" name="checkbox"><i></i>Above Rs 10000</label>
+                                <input type="submit" name="price" id="subs4" style="display: none;">
+                               </form>
+							</div>
+						</div>
+						<script type="text/javascript">
+							$(function(){
+								$('.ch3').change(function(){
+									var val=this.value;
+									$('#subs4').val(val);
+									$('#subs4').click();
+
+
+
+								});
+							});
+						</script>
+		       </section>
+                </div>
+
+		</div>
+			  <div class="clearfix"></div>
+		   </div>
+		   {% for l in check.2 %}
+		   <script type="text/javascript">
+		       	$(function(){
+		       		
+		       		$(":checkbox[value={{l}}]").prop("checked","true");
+		       	});
+		       </script>
+		      {% endfor %}
+		      {% for l in check.1 %}
+		   <script type="text/javascript">
+		       	$(function(){
+		       		
+		       		$(":checkbox[value={{l}}]").prop("checked","true");
+		       	});
+		       </script>
+		      {% endfor %}
+		       <script type="text/javascript">
+		       	$(function(){
+		       		$(":checkbox[value={{check.3}}]").prop("checked","true");
+		       		$(":select[value={{check.0}}]").prop("selected","true");
+		       		
+
+		       	});
+		       </script>
+ 
+	<!-- content-section-ends -->
+<script>
+
+		</script> 
+       <script>
+var modal = document.getElementById('0');
+var btnp = document.getElementById("myBt");
+var span = document.getElementsByClassName("closep")[0];
+$('.major').bind('click', function() {
+	val=$(this).attr("data-name")
+
+		
+          
+          $("#"+val).css("display","block");
+          modal=document.getElementById(val);
+
+ 
+    });
+span.onclick = function() {
+    modal.style.display = "none";
+}
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+</script>
+<script type="text/javascript">
+	$(function(){
+		
+		$('select option[value="'+{{val}}+'"]').attr("selected",true);
+	});
+
+</script>
+</body>
+</html>

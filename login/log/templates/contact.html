@@ -1,0 +1,182 @@
+ <html>
+
+<head>
+     <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="js/jquery.min.js"></script>
+<!-- Custom Theme files -->
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+    
+    
+    <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<!-- Custom Theme files -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ 
+
+<!--webfont-->
+<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+<!-- dropdown -->
+<script src="js/jquery.easydropdown.js"></script>
+<link href="css/nav.css" rel="stylesheet" type="text/css" media="all"/>
+		 <script src="js/scripts.js" type="text/javascript"></script>
+     
+     <style>
+    
+          
+         input,select,textarea{padding:6px 9px;border-radius: 3px;border: 1px solid lightgrey;}
+         select{width: 100%;border:1px solid grey}
+         input[type='text'], input[type='email'] {width:94.3%;padding:6px 9px;border-radius: 3px;}
+         select{
+    padding-left: 43%;}
+         .name,.sec,.num{display: none;}
+         input:focus,input:active{outline: none;}
+         
+    
+    </style>
+        <script>
+             $(document).ready(function () {
+             toggleFields();
+              $("#issue").change(function () {
+             toggleFields();
+    });
+
+});
+// this toggles the visibility of other server
+function toggleFields() {
+    if ($("#issue").val() === "for"){
+        $(".num").hide();
+        $(".name").hide();
+        $(".sec").hide();}
+    
+    if ($("#issue").val() === "pay"){
+        $(".name").show();
+        $(".num").show();
+        $(".sec").hide();}
+
+    
+    if ($("#issue").val() === "cor"){
+        $(".name").hide();
+        $(".sec").show();
+        $(".num").show();
+        
+        }
+    
+        
+
+    
+    
+        
+         
+}
+             
+             
+             
+             </script>
+     </head>
+
+     <body>
+        <div class="top-header navbar-default navbar-fixed-top fixed" style='background-color:#eb1e29;padding-bottom:.7em'>
+            
+			<div class="container">
+			<div class="logo">
+				<a href="index.html"><img src="images/icon.png" alt="" style='width:160px;height:60px;margin-top:-20px;'/></a><br><span >&nbsp;&nbsp;<a href='#' style='color:white'>&#8592;&nbsp;Back</a></span>
+			</div>
+				<div class="header-top-right" style='margin-top:11px;margin-left:-40px;'>
+				 
+				 
+					<!--    <div class="cart" style='margin-left:-50px;margin-top:13px;font-size:18px;clear:all;border:1px solid white'>
+							 
+                                <a href="contact.html" style='color:white;'><i class="fa fa-shopping-cart" aria-hidden="true">&nbsp;Cart</i></a>
+                            
+						 
+						</div>
+				    
+					 <div class='carti' style='margin-top:-25px;margin-left:35px;clear:all;border:1px solid white'>
+
+                    <a href="#" style='color:white;font-size:18px;'><i class="fa fa-sign-in" aria-hidden="true">&nbsp;Log In</i></a>
+                         </div>-->
+                    
+                    <div id='cas' style='float:left;'>
+                     <a href="cart.html" style='color:white;font-size:18px;font-family:arial'><i class="fa fa-shopping-cart" aria-hidden="true">&nbsp;Cart</i></a>
+                    </div>
+                    
+                    <div id='pas' style='float:left;margin-left:35px;font-size:18px;'>
+                     <a href="login.html" style='color:white;font-family:arial'><i class="fa fa-sign-in" aria-hidden="true">&nbsp;Log In</i></a>
+                    </div>
+                    
+				</div>
+			<div class="navigation pull-right" style='padding-right:50px;color:white;margin-top:5px;'>	
+			<div style='font-color:white'>
+              <label class="mobile_menu" for="mobile_menu">
+              <span>Menu</span>
+              </label>
+              <input id="mobile_menu" type="checkbox">
+				<ul class="nav" >
+               
+                     
+           <li class="dropdown1" ><a href="#" style='color:white;font-size:15px;font-family:arial;'>Rent a bike</a>
+           	 
+           </li>        
+            <li><a href="blog.html" style='color:white;font-size:15px;font-family:arial'><i class="fa fa-rss" aria-hidden="true"></i>&nbsp;Blog</a></li>
+            <div class="clearfix"></div>
+          </ul>
+		</div>			
+	 </div>
+			</div>
+		</div>
+    
+         
+     <div id='main' style='margin-top:150px;box-shadow: -1px -1px 6px #888888;width:auto;height:auto;margin-left:17%;margin-right:17%;padding-top:20px;padding-left:10px;padding-right:10px;border-radius:5px;padding-bottom:10px;'>
+     
+     <form>
+         
+         <select name='issue' id='issue'>
+             <option value='for'>For/Reason</option>
+             <option value='pay'>Booking Issue</option>
+             <option value='pay'>Payment and Refund</option>
+             <option value='pay'>Dealer Issue</option>
+             <option value='cor'>Corporate Booking</option>
+             <option value='cor'>Careers</option>
+             <option value='cor'>Suggestion</option>
+             <option value='cor'>Others</option>
+             
+             
+           
+         
+         </select><br><br>
+         <div class='name'>
+         <span> Booking Id :</span>  <input style='margin-left:3.8%;width: 87%;' type="text" name='book'><br><br>
+         </div>
+         <div class='sec'>
+         <span> Name :</span>  <input type="text" name='name' style='margin-left:7.3%;width: 87%;'><br><br>
+         </div>
+         
+         
+         <div class='sec'>
+         <span> Email : </span> &nbsp; <input style='margin-left:7%;width: 87%;' type="email" name='mail'><br><br>
+         </div>
+         <div class='num'>
+         <span> Mobile Number :&nbsp;</span> <input style='width: 87%;' type="text" name='num' style=''><br><br>
+         </div>
+         
+         
+         
+        <div class='mess'>
+       <span>Write Message</span>  <textarea rows="3" cols="25"></textarea>
+            
+            </div>
+         
+         <input type='submit' value=Submit style='background-color:#454545;border:none;color:white;margin-left:44%;'>
+         
+         
+         </form>
+           
+     </div>
+     
+     
+     
+     </body>
+
+</html>

@@ -1,0 +1,82 @@
+.eform lable,input.bform lable,input.rform lable,input{display: block;}
+  ul{margin: 0;padding: 0}
+
+
+
+.eform ul li,.bform ul li,.rform ul li{list-style-type: none;margin: 2px;
+    display: inline-block;
+    list-style-type: none;
+    margin: 5px;
+    color: white;
+    text-shadow: 2px 2px 7px grey;
+    font-size: 16px !important;
+    
+
+}
+input[type='radio']{display: none}
+ul li:hover{color:orangered}
+ul li.active,ul li.secondary-active{color: orangered}
+ 
+ 
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 230px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    padding-left:20px;padding-right: 20px;padding-top: 10px;
+    border: 1px solid #888;
+    width: 60%;
+    height:auto;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+    color: black;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    margin-top:-10px;margin-right: -10px;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#fbike{display: none}
+#frendor{display: none;}
+#frido{display: none;}
